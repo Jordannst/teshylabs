@@ -4,28 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Teshy Labs — Independent software company</title>
-    <meta name="description" content="Teshy Labs is an independent software company in Manado, Indonesia, building cloud software for businesses with a focus on integrating AI into its products.">
+  <title>Teshy Labs — AI-enabled cloud software from Indonesia</title>
+  <meta name="description" content="Teshy Labs is an Indonesian software company founded in December 2025 by Chrisfivo Sutarto, helping businesses build cloud software with AI built in.">
   <link rel="canonical" href="https://teshylabs.me/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Teshy Labs">
-  <meta property="og:title" content="Teshy Labs — Independent software company">
-  <meta property="og:description" content="Cloud software for businesses, with a focus on integrating AI into products. An independent, solo founder-led company in Manado, Indonesia.">
+  <meta property="og:title" content="Teshy Labs — AI-enabled cloud software from Indonesia">
+  <meta property="og:description" content="An independent software company founded in December 2025 by Chrisfivo Sutarto. Based in Manado, Indonesia, helping businesses build cloud software with AI built in.">
   <meta property="og:url" content="https://teshylabs.me/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Teshy Labs — AI-enabled cloud software from Indonesia">
+  <meta name="twitter:description" content="An Indonesian software company founded in December 2025, helping businesses build cloud software and integrate AI into their products.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231d493c'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-size='32' font-weight='700' fill='%23f5f4ef'%3Etl%3C/text%3E%3C/svg%3E">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Teshy Labs",
-      "url": "https://teshylabs.me/",
-      "foundingDate": "2025-12",
-      "founder": { "@type": "Person", "name": "Chrisfivo Sutarto" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Manado", "addressCountry": "ID" },
-      "email": "hello@teshylabs.me",
-      "owns": [
-        { "@type": "Product", "url": "https://kassentix.cloud" },
-        { "@type": "Product", "url": "https://klkinvoice.my.id" }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://teshylabs.me/#organization",
+          "name": "Teshy Labs",
+          "url": "https://teshylabs.me/",
+          "description": "An independent, solo founder-led Indonesian software company founded in December 2025, helping businesses build cloud software and integrate AI into their products.",
+          "foundingDate": "2025-12",
+          "founder": { "@type": "Person", "@id": "https://teshylabs.me/#founder", "name": "Chrisfivo Sutarto" },
+          "address": { "@type": "PostalAddress", "addressLocality": "Manado", "addressCountry": "ID" },
+          "email": "hello@teshylabs.me",
+          "logo": "https://teshylabs.me/assets/teshylabs-mark.svg",
+          "owns": [
+            {
+              "@type": "Product",
+              "@id": "https://teshylabs.me/#kassentix",
+              "name": "Kassentix",
+              "url": "https://kassentix.cloud",
+              "description": "A cloud-based point of sale for Indonesian businesses, with AI analytics powered by Claude."
+            }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://teshylabs.me/#klk",
+          "name": "KLK Invoice Management System",
+          "url": "https://klkinvoice.my.id",
+          "description": "A logistics invoicing system developed by Chrisfivo Sutarto, with transaction tracking, digital signatures, PDF export, and recoverable deletion.",
+          "creator": { "@id": "https://teshylabs.me/#founder" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://teshylabs.me/#website",
+          "name": "Teshy Labs",
+          "url": "https://teshylabs.me/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://teshylabs.me/#organization" }
+        }
       ]
     }
   </script>
@@ -87,6 +118,7 @@
     h2 { font-size: 1rem; line-height: 1.65; }
     .prose { max-width: 65ch; }
     .about-copy { font-size: 1.25rem; line-height: 1.6; letter-spacing: -.02em; }
+    .about-link { display: inline-block; margin-top: 1rem; padding-block: .5rem; font-size: .9375rem; }
     .facts { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 1.5rem; margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); }
     dt { color: var(--muted); font-size: .8125rem; margin-bottom: .375rem; }
     dd { margin: 0; font-size: .9375rem; }
@@ -98,6 +130,7 @@
     h3 { font-size: clamp(1.5625rem, 2.3vw, 1.953rem); line-height: 1.25; letter-spacing: -.035em; max-width: 25ch; }
     .product-number { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; }
     .product p { margin-top: .75rem; color: var(--muted); }
+    .product .work-type { margin: 0 0 .5rem; font-size: .8125rem; }
     .product-demo { margin: 1.75rem 0 0; }
     .product-demo video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--ink); border: 1px solid var(--line); }
     .product-demo figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1rem; margin-top: .625rem; font-size: .8125rem; color: var(--muted); }
@@ -181,62 +214,43 @@
   <main class="wrap" id="main" tabindex="-1">
     <section class="intro" aria-labelledby="intro-heading">
       <div>
-        <p class="intro-label">Independent software company</p>
-        <h1 id="intro-heading">We build cloud software for businesses and <span>integrate AI into our products.</span></h1>
+        <p class="intro-label">Teshy Labs · Indonesian software company</p>
+        <h1 id="intro-heading">We help businesses build cloud software <span>with AI built in.</span></h1>
         <a class="intro-link" href="#products">Explore products <span aria-hidden="true">↘</span></a>
       </div>
-      <div class="product-peeks" aria-label="Product previews">
-        <a class="product-peek" href="#kassentix" aria-label="Explore Kassentix">
-          <img src="assets/kassentix-showcase-first-frame.jpg" width="1280" height="720" alt="" fetchpriority="high">
-          <span class="peek-caption">Kassentix <span>Cloud point of sale</span></span>
-        </a>
+      <div class="product-peeks" aria-label="Software previews">
         <a class="product-peek" href="#klk" aria-label="Explore KLK Invoice Management System">
-          <img src="assets/klk-showcase-first-frame.jpg" width="1920" height="1080" alt="">
-          <span class="peek-caption">KLK Invoice <span>Logistics invoicing</span></span>
+          <img src="assets/klk-showcase-first-frame.jpg" width="1920" height="1080" alt="" fetchpriority="high">
+          <span class="peek-caption">KLK Invoice <span>Founder project</span></span>
+        </a>
+        <a class="product-peek" href="#kassentix" aria-label="Explore Kassentix">
+          <img src="assets/kassentix-showcase-first-frame.jpg" width="1280" height="720" alt="">
+          <span class="peek-caption">Kassentix <span>Cloud point of sale</span></span>
         </a>
       </div>
     </section>
     <section class="section" id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About</h2>
       <div>
-        <p class="about-copy prose">Teshy Labs is an independent, solo founder-led software company based in Manado, Indonesia. The company develops cloud software for businesses, with a focus on integrating AI into its products.</p>
+        <p class="about-copy prose">Teshy Labs is an independent, solo founder-led Indonesian software company founded in December 2025 by Chrisfivo Sutarto. Based in Manado, the company helps businesses build cloud software and integrate AI into their products.</p>
+        <a class="about-link" href="/about.html">About Teshy Labs</a>
         <dl class="facts">
-          <div><dt>Founded</dt><dd>December 2025</dd></div>
+          <div><dt>Founded</dt><dd><time datetime="2025-12">December 2025</time></dd></div>
           <div><dt>Founder</dt><dd>Chrisfivo Sutarto<span>Founder</span></dd></div>
           <div><dt>Based in</dt><dd>Manado, Indonesia</dd></div>
         </dl>
       </div>
     </section>
     <section class="section products" id="products" aria-labelledby="products-heading">
-      <h2 id="products-heading">Products</h2>
+      <h2 id="products-heading">Products &amp; projects</h2>
       <div>
-        <article class="product" id="kassentix" aria-labelledby="kassentix-heading">
-          <div class="product-heading">
-            <h3 id="kassentix-heading">Kassentix</h3>
-            <span class="product-number" aria-hidden="true">01</span>
-          </div>
-          <p>A cloud-based point of sale for Indonesian businesses, with AI analytics powered by Claude.</p>
-          <figure class="product-demo">
-            <video controls playsinline preload="none" width="1280" height="720" poster="assets/kassentix-showcase-first-frame.jpg" aria-label="Kassentix product demo" aria-describedby="kassentix-demo-caption">
-              <source src="assets/kassentix-showcase-720p60.mp4" type="video/mp4">
-              <a href="assets/kassentix-showcase-720p60.mp4">Watch the Kassentix product demo</a>
-            </video>
-            <figcaption id="kassentix-demo-caption"><span>Kassentix · Product demo</span><a href="assets/kassentix-showcase-720p60.mp4">Open video</a></figcaption>
-          </figure>
-          <ul class="features">
-            <li>Sales and transaction management</li>
-            <li>Inventory synchronization</li>
-            <li>Multi-outlet management</li>
-            <li>AI analytics powered by Claude</li>
-          </ul>
-          <a class="product-link" href="https://kassentix.cloud">kassentix.cloud<span aria-hidden="true">↗</span></a>
-        </article>
         <article class="product" id="klk" aria-labelledby="klk-heading">
+          <p class="work-type">Founder project</p>
           <div class="product-heading">
             <h3 id="klk-heading">KLK Invoice Management System</h3>
-            <span class="product-number" aria-hidden="true">02</span>
+            <span class="product-number" aria-hidden="true">01</span>
           </div>
-          <p>Invoicing for logistics businesses, built with AI-assisted development.</p>
+          <p>A logistics invoicing system developed by Chrisfivo Sutarto, the founder of Teshy Labs. Track transactions, sign documents digitally, export PDFs, and recover deleted records. Built with AI-assisted development.</p>
           <figure class="product-demo">
             <video controls playsinline preload="none" width="1280" height="720" poster="assets/klk-showcase-first-frame.jpg" aria-label="KLK Invoice Management System product demo" aria-describedby="klk-demo-caption">
               <source src="assets/klk-showcase-720p60.mp4" type="video/mp4">
@@ -252,12 +266,34 @@
           </ul>
           <a class="product-link" href="https://klkinvoice.my.id">klkinvoice.my.id<span aria-hidden="true">↗</span></a>
         </article>
+        <article class="product" id="kassentix" aria-labelledby="kassentix-heading">
+          <p class="work-type">Teshy Labs product</p>
+          <div class="product-heading">
+            <h3 id="kassentix-heading">Kassentix</h3>
+            <span class="product-number" aria-hidden="true">02</span>
+          </div>
+          <p>Kassentix is a cloud-based point of sale product by Teshy Labs for Indonesian businesses, with AI analytics powered by Claude.</p>
+          <figure class="product-demo">
+            <video controls playsinline preload="none" width="1280" height="720" poster="assets/kassentix-showcase-first-frame.jpg" aria-label="Kassentix product demo" aria-describedby="kassentix-demo-caption">
+              <source src="assets/kassentix-showcase-720p60.mp4" type="video/mp4">
+              <a href="assets/kassentix-showcase-720p60.mp4">Watch the Kassentix product demo</a>
+            </video>
+            <figcaption id="kassentix-demo-caption"><span>Kassentix · Product demo</span><a href="assets/kassentix-showcase-720p60.mp4">Open video</a></figcaption>
+          </figure>
+          <ul class="features">
+            <li>Sales and transaction management</li>
+            <li>Inventory synchronization</li>
+            <li>Multi-outlet management</li>
+            <li>AI analytics powered by Claude</li>
+          </ul>
+          <a class="product-link" href="https://kassentix.cloud">kassentix.cloud<span aria-hidden="true">↗</span></a>
+        </article>
       </div>
     </section>
     <section class="section" id="claude" aria-labelledby="claude-heading">
       <h2 id="claude-heading">Built with Claude</h2>
       <dl class="ai-uses">
-        <div><dt>In development</dt><dd>Claude assists development across Teshy Labs products, including Kassentix and KLK Invoice Management System.</dd></div>
+        <div><dt>In development</dt><dd>Claude is used for AI-assisted development, including work on KLK Invoice Management System and Kassentix.</dd></div>
         <div><dt>In the product</dt><dd>Claude powers AI analytics in Kassentix.</dd></div>
       </dl>
     </section>
@@ -268,7 +304,7 @@
   </main>
   <footer class="site-footer wrap">
     <p>© <span id="year">2026</span> Teshy Labs</p>
-    <p>Manado, Indonesia</p>
+    <p><a href="/about.html">About Teshy Labs</a> · Manado, Indonesia</p>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
